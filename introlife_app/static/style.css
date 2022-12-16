@@ -11,7 +11,7 @@ body{
 }
 #header{
     width: 100%;
-    height: 100vh;
+    
     background-image: urL(images/imagesbackground.png.png);
     background-size: cover;
     background-position: center;
@@ -58,17 +58,22 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20%;
+   
     font-size: 30px;
+    text-align: center;
 
 }
 .header-text h1{
     font-size: 60px;
     margin-top: 20px;
+    
+    
 }
 .header-text h1 span {
-    color: lightblue;
+    color: lightgreen;
+    
 }
+
 
 /*About*/
 #about{
@@ -184,7 +189,7 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: lightgreen;
     transform: translateY(-10px);
 
 }
@@ -261,7 +266,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid lightgreen;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -269,7 +274,7 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff004f;
+    background: lightgreen;
 
 }
 
@@ -287,7 +292,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: lightgreen;
     margin-right: 15px;
     font-size:25px;
 }
@@ -298,18 +303,18 @@ nav ul li a:hover::after{
     text-decoration: none;
     font-size: 30px;
     margin-right: 15px;
-    color: #ababab;
+    color: lightgreen;
     display: inline-block;
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: lightgreen;
     transform: translateY(-5px);
 
 }
 .btn.btn2{
     display: inline-block;
-    background-color: #ff004f;
+    background-color: lightgreen;
 
 }
 .contact-right form{
@@ -341,7 +346,7 @@ form .btn2{
     margin-top: 20px;
 }
 .copyright i{
-    color: #ff004f;
+    color: lightgreen;
 }
 /*css for small screens*/
 

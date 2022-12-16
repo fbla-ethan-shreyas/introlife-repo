@@ -1,121 +1,90 @@
+{% extends "base.html" %}
+{% block content %}
 {% load static %}
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "{% static 'style.css' %}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">     <title>Personal Website</title>
-    <script src="https://kit.fontawesome.com/e43e885c09.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <body>
-            <div id = "header">
-                <div class = "container">
-                    <nav>
-                        <img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo">
-                        <ul>
-                            <li><a href = "#">Home</a></li>
-                            <li><a href = "#">About</a></li>
-                            <li><a href = "#">Services</a></li>
-                            <li><a href = "#">Contact</a></li>
-                            <!-- <i class = "fas fa-times"></i> -->
-                        </ul>
-                        <!-- <i class="fa-solid fa-bars"></i> -->
-                    </nav>
-                    <div class="header-text">
-                        <h1>Hi. We're <span>IntroLife, <br> a mental health company.</h1>
-                    </div>
-                </div>
+<div class="header-text">
+    <h1 id="">Hi. We're <span>IntroLife, <br> a mental health company.</h1>
+</div>
+<!--About-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="../static/images/mentalhealth.jpeg">
             </div>
-        
-            <!--About-->
-            <div id="about">
-                <div class="container">
-                    <div class="row">
-                        <div class="about-col-1">
-                            <img src="{% static 'images/mentalhealth.jpeg' %}">
-                        </div>
-                        <div class="about-col-2">
-                            <h1 class = "sub-title">About Us</h1>
-                            <p>We're a mental health company based in Westfield, New Jersey. We offer therapy, counseling, and checkups; along with an online mental-health based social media service.</p>
-                            <br>
-                            <p>Here at IntroLife, we care about you. Reach out to us for more information!</p>    
-                        </div>
-                    </div>
-                </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Us</h1>
+                <p>We're a mental health company based in Westfield, New Jersey. We offer therapy, counseling, and
+                    checkups; along with an online mental-health based social media service.</p>
+                <br>
+                <p>Here at IntroLife, we care about you. Reach out to us for more information!</p>
             </div>
-        <!---Services-->
-        
-        <div id="services">
-            <div class="container">
-                <h1 class = "sub-title">Our Services</h1>
-                <div class="services-list">
-                    <div>
-                        <h2>Therapy</h2>
-                        <p>Professional, high quality therapists are readily available to talk to you.</p>
-                    </div>
-                    <div>
-                        <h2>Supportive Online Community</h2>
-                        <p>IntroLife offers a robust online social media platform where users can talk about their successes in life; even if it's just the little things.</p>
-                    </div>
-                    <!-- <div>
+        </div>
+    </div>
+</div>
+<!---Services-->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Our Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Therapy</h2>
+                <p>Professional, high quality therapists are readily available to talk to you.</p>
+            </div>
+            <div>
+                <h2>Supportive Online Community</h2>
+                <p>IntroLife offers a robust online social media platform where users can talk about their successes in
+                    life; even if it's just the little things.</p>
+            </div>
+            <!-- <div>
                         <h2>Architectural Design</h2>
                         <p>CTE experience in AUTOCAD. Created mulitple orthographic projections for fragrence bottles. Some other projects include creating a 2d model of a door, mirror, etc.</p>
                     </div> -->
-                </div>
+        </div>
+    </div>
+</div>
+<!----Portfolio-->
+
+<!----contact-->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Us</h1>
+                <p><i class="fas fa-paper-plane"></i> help@introlife.com </p>
+                <p><i class="fa-sharp fa-solid fa-square-phone-flip"></i>0123456789</p>
+            </div>
+
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
             </div>
         </div>
-        <!----Portfolio-->
-        
-        <!----contact-->
-        
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class= "sub-title">Contact Us</h1>
-                        <p><i class="fas fa-paper-plane"></i> help@introlife.com </p>
-                        <p><i class="fa-sharp fa-solid fa-square-phone-flip"></i>0123456789</p>
-                    </div>
-                    
-                    <div class="contact-right">
-                        <form>
-                            <input type = "text" name = "Name" placeholder = "Your Name" required>
-                            <input type = "email" name = "email" placeholder = "Your Email" required>
-                            <textarea name = "Message" rows = "6" placeholder = "Your Message"></textarea>
-                            <button type = "submit" class= "btn btn2">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        
-        
-            <script>
-                var tablinks = document.getElementsByClassName("tab-links");
-                var tabcontents = document.getElementsByClassName("tab-contents");
-        
-                function opentab(tabname){
-                    for(tablink of tablinks){
-                        tablink.classList.remove("active-link");
-                    }
-                    for(tabcontent of tabcontents){
-                        tabcontent.classList.remove("active-tab");
-                    }
-                    event.currentTarget.classList.add("active-link");
-                    document.getElementById(tabname).classList.add("active-tab");
-        
-                }
-        
-            </script>
-        
-        </body>
-    </body>
-</html>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+</script>
+{% endblock content %}
