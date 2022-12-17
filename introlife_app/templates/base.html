@@ -18,12 +18,23 @@
             <div id = "header">
                 <div class = "container">
                     <nav>
-                        <img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo">
+                        <a href = "{% url 'home' %}"><img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo"></a>
                         <ul>
-                            <li><a href = "">Home</a></li>
-                            <li><a href = "/about/">About</a></li>
-                            <li><a href = "#">Services</a></li>
-                            <li><a href = "#">Contact</a></li>
+                            <li><a href = "{% url 'home' %}">Home</a></li>
+                            <li><a href = "{% url 'about' %}">About</a></li>
+                            <li><a href = "">Services</a></li>
+                            <li><a href = "">Contact</a></li>
+                    
+                            {% if user.is_authenticated %}
+                            
+                            <li><a href = "{% url 'logout' %}">Logout</a></li>
+                            <li>{{ user.username }}</li>
+
+                            {% else %}
+                            <li><a href = "{% url 'signup' %}">Sign Up</a></li>
+                            <li><a href = "{% url 'login' %}">Login</a></li>
+
+                            {% endif %}
                             <!-- <i class = "fas fa-times"></i> -->
                         </ul>
                         <!-- <i class="fa-solid fa-bars"></i> -->
@@ -33,6 +44,10 @@
             {% block content %}
             {% endblock %}
             {% block content_about %}
+            {% endblock %}
+            {% block signup_content %}
+            {% endblock %}
+            {% block login_content %}
             {% endblock %}
     </body>
     </body>

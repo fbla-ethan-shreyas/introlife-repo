@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+<div class = "intro">
+    <h1 class="logo-header">
+        <span class="logo1">Intro</span><span class = "logo1">Life.</span>
+    </h1>
+</div> 
 <div class="header-text">
     <h1 id="">Hi. We're <span>IntroLife, <br> a mental health company.</h1>
 </div>
@@ -67,9 +72,7 @@
         </div>
     </div>
 </div>
-
-
-
+<script src = "{% static 'app.js' %}"></script>
 <script>
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
@@ -85,6 +88,5 @@
         document.getElementById(tabname).classList.add("active-tab");
 
     }
-
 </script>
 {% endblock content %}

@@ -5,6 +5,61 @@
     box-sizing: border-box;
 
 }
+
+/* Splash screen*/
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 1005;
+    height: 80px;
+}
+
+header h4 {
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.intro{
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    transition: 1s;
+}
+
+.logo-header{
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+.logo1{
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+    color: lightgreen;
+}
+
+.logo1.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo1.fade{
+    bottom: 150px;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+
+}
+
 body{
     background: #080808;
     color: #fff;
@@ -362,3 +417,4 @@ form .btn2{
         font-size: 30px
     }
 }
+
