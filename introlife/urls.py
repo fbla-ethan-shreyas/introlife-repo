@@ -23,5 +23,7 @@ urlpatterns = [
     path('about/', views.about, name = 'about'),
     path('signup/', views.signup, name = 'signup'),
     path('login/', views.login, name = 'login'),
-    path('logout/', views.logout, name = 'logout')
+    path('logout/', views.logout, name = 'logout'),
+    # path('introchat/', views.introchat, name = 'introchat'),
+    # path('create_post/', views.create_post, name = 'create_post')
 ]

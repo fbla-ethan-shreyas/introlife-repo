@@ -6,6 +6,8 @@
 
 }
 
+
+
 /* Splash screen*/
 header{
     position: relative;
@@ -320,8 +322,9 @@ nav ul li a:hover::after{
 .btn{
     display: block;
     margin: 50px auto;
+    background: #262626;
     width: fit-content;
-    border: 1px solid lightgreen;
+    border: 1px solid #262626;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -417,4 +420,13 @@ form .btn2{
         font-size: 30px
     }
 }
-
+ 
+/* about us page */
+#aboutus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 3000;
+    font-size: 60px;
+    font-style: bold;
+}

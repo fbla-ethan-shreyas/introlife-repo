@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +30,7 @@
                             
                             <li><a href = "{% url 'logout' %}">Logout</a></li>
                             <li>{{ user.username }}</li>
+                            <!-- <li><a href = "#">IntroChat</a></li> -->
 
                             {% else %}
                             <li><a href = "{% url 'signup' %}">Sign Up</a></li>
@@ -49,6 +51,10 @@
             {% endblock %}
             {% block login_content %}
             {% endblock %}
+            {% block introchat_content %}
+            {% endblock %}
+            {% block createpost_content %}
+            {% endblock createpost_content %}
     </body>
     </body>
 </html>
