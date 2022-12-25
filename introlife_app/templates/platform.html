@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block introchat_content %}
+{% for post in post %}
+<div class = "container">
+        <!-- <p>{{ post.title }} - <i>{{ post.author }}</i></p>
+        <p>{{ post.body }}</p>
+        <br> -->
+        <div class = "column">
+                <div class="services-list">
+                        <div>
+                            <h2>{{ post.title }}</h2>
+                            {{ post.body }}
+                </div>
+        </div>
+</div>
+{% endfor %}    
+{% endblock introchat_content %}

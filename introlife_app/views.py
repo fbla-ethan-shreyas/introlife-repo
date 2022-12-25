@@ -6,6 +6,8 @@ from django.contrib.auth import logout as auth_logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.paginator import Paginator
+from introlife_app.models import Post
+from django.views.generic import CreateView
 
 # Create your views here.
 def home(request):
@@ -48,3 +50,17 @@ def logout(request):
     auth_logout(request)
     messages.info(request, "You have successfully logged out.")
     return redirect("home")
+
+def platform(request):
+    post = Post.objects.all()
+    return render(request, "platform.html", {"post" : post})
+
+class CreatePostView(CreateView):
+    model = Post
+    template_name = "createpost.html"
+    fields = ('title', 'body')
+
+    #passes current user to author field
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)

@@ -24,6 +24,8 @@ urlpatterns = [
     path('signup/', views.signup, name = 'signup'),
     path('login/', views.login, name = 'login'),
     path('logout/', views.logout, name = 'logout'),
+    path('platform/', views.platform, name = 'platform'),
+    path('createpost/', views.CreatePostView.as_view(), name = 'createpost')
     # path('introchat/', views.introchat, name = 'introchat'),
     # path('create_post/', views.create_post, name = 'create_post')
 ]
