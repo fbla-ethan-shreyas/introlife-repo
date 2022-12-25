@@ -7,7 +7,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.paginator import Paginator
 from introlife_app.models import Post
-from django.views.generic import CreateView
+from django.views.generic import CreateView, DetailView
 
 # Create your views here.
 def home(request):
@@ -53,7 +53,11 @@ def logout(request):
 
 def platform(request):
     post = Post.objects.all()
-    return render(request, "platform.html", {"post" : post})
+    paginator = Paginator(post, 1)
+
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, "platform.html", {"post" : post, "page_obj" : page_obj})
 
 class CreatePostView(CreateView):
     model = Post
@@ -64,3 +68,7 @@ class CreatePostView(CreateView):
     def form_valid(self, form):
         form.instance.author = self.request.user
         return super().form_valid(form)
+
+class PostDetailView(DetailView):
+    model = Post
+    template_name = "post.html"

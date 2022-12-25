@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block post_content %}
+<div class = "container">
+    <div class = "row">
+        <h1 id = "aboutus">{{ post.title }}</h1>
+    </div>
+    <p>{{ post.body }}</p>
+</div>
+{% endblock post_content %}
