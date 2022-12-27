@@ -1,14 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+
+
+
+
+
+
+
+
 <div class = "intro">
     <h1 class="logo-header">
         <span class="logo1">Intro </span><span class = "logo1">Life.</span>
     </h1>
 </div> 
-<div class="header-text">
-    <h1 id="">Hi. We're <span>IntroLife, <br> a mental health company.</h1>
+<div class = "fullscreen">
+    <div class="header-text" >
+        <h1 id="">Hi. We're <span>IntroLife, <br> a mental health company.</h1>
+    </div>
 </div>
+
 <!--About-->
 <div id="about">
     <div class="container">
@@ -32,11 +43,12 @@
     <div class="container">
         <h1 class="sub-title">Our Services</h1>
         <div class="services-list">
-            <div>
+         
+            <div class = "services-text">
                 <h2>Therapy</h2>
                 <p>Professional, high quality therapists are readily available to talk to you.</p>
             </div>
-            <div>
+            <div  class = "services-text">
                 <h2>Supportive Online Community</h2>
                 <p>IntroLife offers a robust online social media platform where users can talk about their successes in
                     life; even if it's just the little things.</p>
@@ -56,16 +68,28 @@
     <div class="container">
         <div class="row">
             <div class="contact-left">
-                <h1 class="sub-title">Contact Us</h1>
-                <p><i class="fas fa-paper-plane"></i> help@introlife.com </p>
-                <p><i class="fa-sharp fa-solid fa-square-phone-flip"></i>0123456789</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="ContactUs">Contact Us</h1>
+                <div id = "ContactUsIcons">
+                    <p><i class="fas fa-paper-plane"></i> help@introlife.com </p>
+                    <p><i class="fa-sharp fa-solid fa-square-phone-flip"></i>0123456789</p>
+                </div>
+                
             </div>
 
             <div class="contact-right">
+                <br>
+                <br>
+         
+              
                 <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <input class = "form" type="text" name="Name" placeholder="Your Name" required>
+                    <input class = "form" type="email" name="email" placeholder="Your Email" required>
+                    <textarea class = "form" name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
             </div>
