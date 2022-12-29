@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'introlife_app',
     'crispy_forms'
 ]
@@ -123,3 +124,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# MAILCHIMP CREDENTIALS
+MAILCHIMP_API_KEY = "61685d1a2c6e275418440161a6384eb9-us10"
+MAILCHIMP_DATA_CENTER = "us10"
+MAILCHIMP_EMAIL_LIST_ID = "d386876f2a"

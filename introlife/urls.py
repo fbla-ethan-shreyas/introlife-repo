@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from introlife_app import views
 
 urlpatterns = [
@@ -26,7 +26,8 @@ urlpatterns = [
     path('logout/', views.logout, name = 'logout'),
     path('platform/', views.platform, name = 'platform'),
     path('createpost/', views.CreatePostView.as_view(), name = 'createpost'),
-    path('<slug:slug>/', views.PostDetailView.as_view(), name = "post_detail")
+    path('subscribe/', views.subscription, name = 'subscribe'),
+    path('<slug:slug>/', views.PostDetailView.as_view(), name = "post_detail"),
     # path('introchat/', views.introchat, name = 'introchat'),
     # path('create_post/', views.create_post, name = 'create_post')
 ]

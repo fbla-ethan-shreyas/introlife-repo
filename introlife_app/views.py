@@ -8,6 +8,13 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.core.paginator import Paginator
 from introlife_app.models import Post
 from django.views.generic import CreateView, DetailView
+from django.conf import settings
+from mailchimp_marketing import Client
+from mailchimp_marketing.api_client import ApiClientError
+
+api_key = settings.MAILCHIMP_API_KEY
+server = settings.MAILCHIMP_DATA_CENTER
+list_id = settings.MAILCHIMP_EMAIL_LIST_ID
 
 # Create your views here.
 def home(request):
@@ -72,3 +79,29 @@ class CreatePostView(CreateView):
 class PostDetailView(DetailView):
     model = Post
     template_name = "post.html"
+
+def subscribe(email):
+    mailchimp = Client()
+    mailchimp.set_config({
+        "api_key" : api_key,
+        "server" : server,
+    })
+    
+    member_info = {
+        "email_address" : email,
+        "status" : "subscribed",
+    }
+
+    try:
+        response = mailchimp.lists.add_list_member(list_id, member_info)
+        print("response: {}".format(response))
+    except ApiClientError as error:
+        print("An exception occured: {}".format(error.text))
+
+def subscription(request):
+    if request.method == "POST":
+        email = request.POST['email']
+        subscribe(email)
+        messages.success(request, "Your email has been received. Thank you!")
+
+    return render(request, "subscribe.html")

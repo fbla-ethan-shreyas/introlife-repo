@@ -9,6 +9,23 @@
 #textpleasebewhite{
     color:#262626;
 }
+.hidden{
+    opacity: 0; 
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+.hidden2{
+    opacity: 0; 
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 .toolbar{
     padding: 6px 7px;
 
@@ -132,7 +149,7 @@ nav ul li a:hover::after{
     margin: 0px;
     
     width: 100%;
-    height:55vh;
+    height:100vh;
 }
 .header-text{
    
