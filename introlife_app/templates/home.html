@@ -21,7 +21,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Us</h1>
-                <p>We're a mental health company based in Westfield, New Jersey. We offer therapy, counseling, and
+                <p id = "sub-title2">We're a mental health company based in Westfield, New Jersey. We offer therapy, counseling, and
                     checkups; along with an online mental-health based social media service.</p>
                 <br>
                 <p>Here at IntroLife, we care about you. Reach out to us for more information!</p>
@@ -58,16 +58,11 @@
 
 <div id="contact">
     <div class="container">
-        <div class="row">
-            <div class="contact-left">
-            </div>
-
-            <div class="contact-right">
-              
-
-                    <a href="{% url 'subscribe' %}"><button type="submit" class="btn btn2">Subscribe To Our Mailing List!</button></a>
-            </div>
-        </div>
+        <!-- <div class="row"> -->
+            <a href="{% url 'subscribe' %}" style = "text-decoration:none;">
+                <button class = "btn btn-primary">Join Our Mailing List</button>
+            </a>        
+        <!-- </div> -->
     </div>
 </div>
 <script src = "{% static 'app.js' %}"></script>

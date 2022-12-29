@@ -12,7 +12,9 @@ const observer = new IntersectionObserver((entries) =>{
 const hiddenElements = document.querySelectorAll(".hidden, .hidden2");
 hiddenElements.forEach((el) => observer.observe(el));
 
-
+function toggleMobileMenu(menu) {
+    menu.classList.toggle('open');
+}
 
 let intro = document.querySelector('.intro');
 let logo = document.querySelector('.logo-header');

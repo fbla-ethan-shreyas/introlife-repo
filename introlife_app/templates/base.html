@@ -15,37 +15,84 @@
     <title>IntroLife.</title>
     <script src="https://kit.fontawesome.com/e43e885c09.js" crossorigin="anonymous"></script>
     </head>
+
+
     <body>
-        <body>
-            <div>
-                <div id = "header">
-                    <div class = "container">
-                        <nav>
-                            <a href = "{% url 'home' %}"><img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo"></a>
-                            <ul  id = "textpleasebewhite">
-                                <li class = "toolbar"><a href = "{% url 'home' %}" style = "color:lightgreen;">Home</a></li>
-                                <li class = "toolbar"><a href = "{% url 'about' %}" style = "color:lightgreen;">About</a></li>
-                                <!-- <li><a href = "">Services</a></li>
-                                <li><a href = "">Contact</a></li> -->
-                        
-                                {% if user.is_authenticated %}
-                                
-                                <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
-                                <li class = "toolbar">{{ user.username }}</li>
-                                <li class = "toolbar"><a href="{% url 'platform' %}" style = "color:lightgreen;">Platform</a></li>
-                                <!-- <li><a href = "#">IntroChat</a></li> -->
-    
-                                {% else %}
-                                <li class = "toolbar"><a href = "{% url 'signup' %}" style = "color:lightgreen;">Sign Up</a></li>
-                                <li class = "toolbar"><a href = "{% url 'login' %}" style = "color:lightgreen;">Login</a></li>
-    
-                                {% endif %}
-                                <!-- <i class = "fas fa-times"></i> -->
-                            </ul>
-                            <!-- <i class="fa-solid fa-bars"></i> -->
-                        </nav>
-                    </div>
+        <header id>
+            <div id="brand"><a href="/"></a></div>
+            <nav>
+              <a href = "{% url 'home' %}"><img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo"/></a>
+
+              <ul id = "navToolbar">
+                
+                  
+          
+              
+                <li class = "toolbar"><a href = "{% url 'home' %}" style = "color:lightgreen;">Home</a></li>
+                    <li class = "toolbar"><a href = "{% url 'about' %}" style = "color:lightgreen;">About</a></li>
+                    <!-- <li><a href = "">Services</a></li>
+                    <li><a href = "">Contact</a></li> -->
+            
+                    {% if user.is_authenticated %}
+                    
+                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
+                    <li class = "toolbar" style = "color:pink;"><a style = "color:pink;">{{ user.username }}</a></li>
+                    <li class = "toolbar"><a href="{% url 'platform' %}" style = "color:lightgreen;">Platform</a></li>
+                    <!-- <li><a href = "#">IntroChat</a></li> -->
+
+                    {% else %}
+                    <li class = "toolbar"><a href = "{% url 'signup' %}" style = "color:lightgreen;">Sign Up</a></li>
+                    <li class = "toolbar"><a href = "{% url 'login' %}" style = "color:lightgreen;">Login</a></li>
+
+                    {% endif %}
+                    <!-- <i class = "fas fa-times"></i> -->
+               
+                <!-- <i class="fa-solid fa-bars"></i> -->
+              </ul>
+            </nav>
+            <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+              <ul class="mobile-menu">
+                <li class = "toolbar"><a href = "{% url 'home' %}" style = "color:lightgreen;">Home</a></li>
+                    <li class = "toolbar"><a href = "{% url 'about' %}" style = "color:lightgreen;">About</a></li>
+                    <!-- <li><a href = "">Services</a></li>
+                    <li><a href = "">Contact</a></li> -->
+            
+                  
+                    {% if user.is_authenticated %}
+                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
+                    <li class = "toolbar">{{ user.username }}</li>
+                    <li class = "toolbar"><a href="{% url 'platform' %}" style = "color:lightgreen;">Platform</a></li>
+                    <!-- <li><a href = "#">IntroChat</a></li> -->
+
+                    {% else %}
+                    <li class = "toolbar"><a href = "{% url 'signup' %}" style = "color:lightgreen;">Sign Up</a></li>
+                    <li class = "toolbar"><a href = "{% url 'login' %}" style = "color:lightgreen;">Login</a></li>
+                    {% endif %}
+              </ul>
             </div>
+          </header>
+
+
+        <nav>
+            
+
+
+            <ul id = "toolbar1">
+              
+                    
+            </ul>
+         </nav>
+
+        
+
+
+
+
+
+
             
           
             {% block content %}
