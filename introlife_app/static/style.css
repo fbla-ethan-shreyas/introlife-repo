@@ -5,7 +5,16 @@
     box-sizing: border-box;
     
 }
+nav {
+    background: aliceblue;
+}
 
+#navToolbar2{
+    background: white;
+}
+#navToolbar3{
+    background: white;
+}
 .logo{
     position: relative;
     bottom: 80px;
@@ -17,6 +26,7 @@
     position: absolute;
     right: 0px;
     top: 30px;
+ 
 
 }
 header a {
@@ -55,7 +65,7 @@ header a {
   }
   
   ul li {
-    padding: 5px;
+    padding: 0px;
     margin-left: 10px;
   }
   
@@ -135,6 +145,12 @@ header a {
   }
   
   @media (max-width: 600px) {
+    #navToolbar2{
+        background: #050100;
+    }
+    #navToolbar3{
+        background: #050100;
+    }
     .logo{
         position: relative;
         bottom: 80px;
@@ -160,13 +176,13 @@ header a {
     margin: 0px;
     
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 160px);
 }
     nav{
         display: flex;
         height: 80px;
         width: 100%;
-        background: #1b1b1b;
+        background: transparent;
         align-items: center;
         justify-content: space-between;
         padding: 0 50px 0 100px;
@@ -186,7 +202,7 @@ header a {
         text-decoration: none;
         font-size: 18px;
         font-weight: 500;
-        padding: 8px 15px;
+        padding: 0px 5px;
         border-radius: 5px;
     
         transition: all 0.3s ease;
@@ -194,7 +210,7 @@ header a {
       nav ul li a.active,
       nav ul li a:hover{
     
-        background: #fff;
+        background: #262626;
       }
       nav .menu-btn i{
         color: #fff;
@@ -217,7 +233,8 @@ header a {
     .hidden2{
         opacity: 0; 
         transform: translateX(-100%);
-        transition: all 2s;
+        transition: 1.5s;
+        
     }
     
     .show{
@@ -789,6 +806,13 @@ header a {
 /*css for small screens*/
 
 @media (min-width: 699px) and (max-width: 799px){
+    #navToolbar2{
+        background: #050100;
+    }
+    #navToolbar3{
+        background: #050100;
+    }
+    
     .logo{
         position: relative;
         bottom: 80px;
@@ -816,6 +840,12 @@ header a {
     }
 }
 @media (min-width: 320px) and (max-width: 811px){
+    #navToolbar2{
+        background: #050100;
+    }
+    #navToolbar3{
+        background: #050100;
+    }
     .logo{
         position: relative;
         bottom: 80px;
@@ -846,7 +876,7 @@ header a {
 
 
     nav{
-      padding: 0 40px 0 50px;
+      padding: 0 40px 0 20px;
     }
   
 
@@ -857,7 +887,7 @@ header a {
         left: 0;
         top: 0;
         width: 100%;
-        height: 70vh;
+        height: 100vh;
         background-color: #fff;
         transition: 1s;
     }
@@ -975,6 +1005,12 @@ header a {
 
     }
     @media (min-width: 420px) and (max-width: 600px){
+        #navToolbar2{
+            background: #050100;
+        }
+        #navToolbar3{
+            background: #050100;
+        }
         .logo{
             position: relative;
             bottom: 80px;
@@ -988,7 +1024,7 @@ header a {
             text-align: center;
             color: #262626; 
             position: relative;
-            bottom: 50vh;
+            bottom: 70vh;
             align-items: center;
         }
         .header-text h1{
@@ -1005,6 +1041,12 @@ header a {
     }
 
     @media (min-width: 600px) and (max-width: 699px){
+        #navToolbar2{
+            background: #050100;
+        }
+        #navToolbar3{
+            background: #050100;
+        }
         .logo{
             position: relative;
             bottom: 80px;
@@ -1018,7 +1060,7 @@ header a {
             text-align: center;
             color: #262626; 
             position: relative;
-            bottom: 50vh;
+            bottom: 70vh;
             display: flex;
             justify-content: center;
         }
@@ -1036,7 +1078,14 @@ header a {
         }
         
     }
-    @media (min-width: 799px) and (max-width: 1000px){
+    @media (min-width: 799px) and (max-width: 810px){
+        
+        #navToolbar2{
+            background: black;
+        }
+        #navToolbar3{
+            background: black;
+        }
         .logo{
             position: relative;
             bottom: 80px;
@@ -1050,7 +1099,7 @@ header a {
             left: 0;
             top: 0;
             width: 100%;
-            height: 50vh;
+            height: 100vh;
             background-color: #fff;
             transition: 1s;
         }
@@ -1113,7 +1162,17 @@ header a {
 }
  
     }
+@media (min-width: 500px) and (max-width: 580px){
+    .header-text h1{
+        align-items: center;
+        text-align: center;
+        top: 150px;
+        position: absolute;
+       
+justify-content: center;
+}   
 
+}
 @media (min-width: 420px) and (max-width: 499px){
     .header-text{
         align-items: center;
@@ -1137,4 +1196,17 @@ header a {
     }
 
     
+}
+
+@media (min-width: 810px) and (max-width: 920px){
+    .logo{
+        display: none;
+    }
+}
+
+
+#centerpls {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }

@@ -13,7 +13,8 @@
                                 <a href="{{ post.get_absolute_url }}", style = "text-decoration:none; color:white;">
                                         <div>
                                                 <h2>{{ post.title }}</h2>
-                                                <p>{{ post.body }}</p>
+                                                <p><i  style = "font-size:25px;">{{ post.author }}</i></p>
+                                                <p>{{ post.body|truncatewords:15 }}</p>
                                             </div>
                                 </a>
         </div>

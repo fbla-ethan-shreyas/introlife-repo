@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block therapy_content %}
+<section style = "background-image: url('../static/images/therapybackground.jpg');"></section>>
+
+
+<div class = "fullscreen" class = "hidden"> 
+    
+        <h1 class ="header-text" style = "font-size: 40px;">A New Beginning</h1>
+    
+    <div id="contact"> 
+        <div class="container">
+            <!-- <div class="row"> -->
+                <a href="{% url 'subscribe' %}" style = "text-decoration:none;">
+                    <button class = "btn btn-primary">Sign Up For Therapy!</button>
+                </a>        
+            <!-- </div> -->
+        </div>
+    </div>
+</div>
+
+
+</section>
+{% endblock therapy_content %}

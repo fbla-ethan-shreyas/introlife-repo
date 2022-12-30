@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block post_content %}
 <div class = "container">
-    <div class = "row">
+    <div class = "column">
         <h1 id = "aboutus">{{ post.title }}</h1>
+        <br>
+        <h3 id = "centerpls">Written by {{ post.author }}</h3>
     </div>
     <p>{{ post.body }}</p>
 </div>

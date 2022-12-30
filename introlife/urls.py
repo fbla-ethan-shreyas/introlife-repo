@@ -20,6 +20,7 @@ from introlife_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', views.home, name = 'home'),
+    path('', views.home, name = 'home'),
     path('about/', views.about, name = 'about'),
     path('signup/', views.signup, name = 'signup'),
     path('login/', views.login, name = 'login'),
@@ -27,6 +28,9 @@ urlpatterns = [
     path('platform/', views.platform, name = 'platform'),
     path('createpost/', views.CreatePostView.as_view(), name = 'createpost'),
     path('subscribe/', views.subscription, name = 'subscribe'),
+    path('privacypolicy/', views.privacypolicy, name = 'privacypolicy'),
+    path('termsandconditions/', views.tandc, name = 'termsandconditions'),
+    path('therapy/', views.therapy, name = 'therapy'),
     path('<slug:slug>/', views.PostDetailView.as_view(), name = "post_detail"),
     # path('introchat/', views.introchat, name = 'introchat'),
     # path('create_post/', views.create_post, name = 'create_post')

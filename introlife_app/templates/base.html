@@ -14,16 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">     
     <title>IntroLife.</title>
     <script src="https://kit.fontawesome.com/e43e885c09.js" crossorigin="anonymous"></script>
+    <script defer src="{% static 'app.js' %}"></script>
     </head>
+    <link rel = "stylesheet" href = "{% static 'style.css' %}" > 
+<section style = "background-image: url('../static/images/background1.jpg');">
 
+    <body >
+        <header id = "navToolbar3" >
+           
+            <nav id = "navToolbar2" >
+              <img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo"/>
 
-    <body>
-        <header id>
-            <div id="brand"><a href="/"></a></div>
-            <nav>
-              <a href = "{% url 'home' %}"><img src = "{% static 'images/IntroLifeLogo.png' %}" class = "logo"/></a>
-
-              <ul id = "navToolbar">
+              <ul id = "navToolbar" >
                 
                   
           
@@ -35,9 +37,10 @@
             
                     {% if user.is_authenticated %}
                     
-                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
-                    <li class = "toolbar" style = "color:pink;"><a style = "color:pink;">{{ user.username }}</a></li>
+                    <li class = "toolbar""><a href = "{% url 'therapy' %}" style = "color:lightgreen;">Therapy</a></li>
                     <li class = "toolbar"><a href="{% url 'platform' %}" style = "color:lightgreen;">Platform</a></li>
+                    <li class = "toolbar" style = "color:pink;"><a style = "color:pink;">{{ user.username }}</a></li>
+                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
                     <!-- <li><a href = "#">IntroChat</a></li> -->
 
                     {% else %}
@@ -62,9 +65,10 @@
             
                   
                     {% if user.is_authenticated %}
-                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
-                    <li class = "toolbar">{{ user.username }}</li>
+                    <li class = "toolbar""><a href = "{% url 'therapy' %}" style = "color:lightgreen;">Therapy</a></li>
                     <li class = "toolbar"><a href="{% url 'platform' %}" style = "color:lightgreen;">Platform</a></li>
+                    <li class = "toolbar" style = "color:lightpink;">{{ user.username }}</li>
+                    <li class = "toolbar"><a href = "{% url 'logout' %}" style = "color:lightgreen;">Logout</a></li>
                     <!-- <li><a href = "#">IntroChat</a></li> -->
 
                     {% else %}
@@ -111,13 +115,21 @@
             {% endblock post_content %}
             {% block subscribe_content %}
             {% endblock subscribe_content %}
+            {% block privacy_content %}
+            {% endblock privacy_content %}
+            {% block therapy_content %}
+          {% endblock therapy_content %}
     </body>
     <footer>
         <div class="copyright">
             <p>Copyright © 2022 Introlife, Inc. All trademarks and registered trademarks appearing on IntroLife are the property of their respective owners.</p>
             <p>All Rights Reserved.</p>
+            <p><a href="{% url 'privacypolicy' %}" style = "color:aliceblue;">Privacy Policy</a></p>
         </div>
      
     </footer>
+
+
+  </section>
     </body>
 </html>

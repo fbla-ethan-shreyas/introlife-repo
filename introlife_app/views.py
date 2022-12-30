@@ -105,3 +105,12 @@ def subscription(request):
         messages.success(request, "Your email has been received. Thank you!")
 
     return render(request, "subscribe.html")
+
+def privacypolicy(request):
+    return render(request, "privacypolicy.html")
+
+def tandc(request):
+    return render(request, "tandc.html")
+
+def therapy(request):
+    return render(request, "therapy.html")
